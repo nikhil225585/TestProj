@@ -1,0 +1,19 @@
+{
+     "source_table_names": "",
+     "process_type":"raw_to_raw_processed",
+     "target_db_name": "servicing_raw_processed_access",
+     "temp_table_names": "",
+     "sql_script_file_location":"glue-job/scripts/raw_processed/servicing_payoff/sql/v1/",
+     "target_table_schematize_path":"glue-job/schemas/raw_processed/servicing_payoff/payofftransaction_full_load_schema.txt",
+     "target_table_name": "payofftransaction",
+     "target_file_path": "/servicing/payoff/payofftransaction",
+     "target_table_format":"glueparquet",
+     "target_file_format": "parquet",
+     "source_file_format":"csv",
+     "source_bucket_key":"servicing-payofftransaction/",
+     "source_column_list":"payofftransactionid,loannumber,originationloannumber,faxnumber,isupdate,createdate,createdbyid,lastupdatedate,lastupdatedbyid,lendername,recipientname,judgmentday",
+     "file_column_delimiter":",",
+     "has_file_header":"true",
+     "bookmark_key":"glue-job/checkpoint/servicing_payoff/payofftransaction_full_load.txt",
+     "target_table_partition_keys":"datekey,hour"
+}
